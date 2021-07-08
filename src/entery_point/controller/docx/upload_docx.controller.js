@@ -18,7 +18,7 @@
         // or even res.render(); whatever response you want here.
    }
    try{
-     console.log(req.file)
+    //  console.log(req)
       await res.send(req.file)
 
    } catch(err){
@@ -29,7 +29,7 @@
 
 
 
-        next()
+        // next()
  }
 
 

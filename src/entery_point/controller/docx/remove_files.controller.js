@@ -4,9 +4,9 @@ module.exports = (repository) => {
     const deleteFiles= async(req,res)=>{
         const DeleteFilesCase = DeleteFiles(repository);
         // const locId= await req.params.path;
-        // console.log(req.params)
+        console.log(req.body.path)
 
-        DeleteFilesCase.execute(`src/data_provider/uploads`).then(result=>{
+        DeleteFilesCase.execute(req.body.path).then(result=>{
           console.log(result)
           res.status(201).json(`removed`)
 

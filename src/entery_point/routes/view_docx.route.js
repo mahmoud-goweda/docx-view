@@ -3,11 +3,12 @@ const docxUploadController = require('../controller/docx/index');
 const docxUpload = require('../middleware/docx_multer');
 const DocxRepository = require('../../data_provider/repositories/upload-docx')
 const  rimraf = require("rimraf");
+var fs = require('fs');
 
 
 const DocxFileView = () => {
   //   const database = new userDatabase();
-    const repository = new DocxRepository(rimraf);
+    const repository = new DocxRepository(fs);
     const controller = docxUploadController( repository );
     const router = express.Router();
 
@@ -17,7 +18,7 @@ const DocxFileView = () => {
 
       router.route('/remove')
 
-      .delete(controller.remove_docx)
+      .post((controller.remove_docx))
 
     return router;
   }

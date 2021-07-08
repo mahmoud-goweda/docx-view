@@ -12,7 +12,7 @@ module.exports = class UploadDocxRepository {
   deleteFiles(distination){
     return new Promise((resolve, reject) => {
 
-      this.rep(distination, (res,err)=>{
+      this.rep.unlink(distination, (res,err)=>{
         if(err){
 
           return  reject(err)
