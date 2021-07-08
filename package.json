@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "this is master-HR node back-end",
   "main": "app.js",
-  "scripts": {"start": "node app.js",
+  "scripts": {
+    "start": "node app.js",
     "devStart": "nodemon app.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,14 +27,13 @@
     "mongodb": "^3.6.9",
     "mongoose": "^5.10.7",
     "multer": "^1.4.2",
+    "newrelic": "^7.5.2",
     "nodemailer": "^6.6.1",
     "nodemon": "^2.0.4",
     "npm": "^7.9.0",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
-
     "nodemon": "^2.0.4"
-
   }
 }
